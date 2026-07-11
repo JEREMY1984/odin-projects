@@ -28,3 +28,18 @@ h2 {
 #main-heading {
     color: forestgreen;
 }
+
+button {
+    background-color: #007bc4;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #005fa3;
+}

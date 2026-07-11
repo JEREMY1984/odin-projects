@@ -1,8 +1,29 @@
-// 1. Find the heading element by its unique ID
-const mainTitle = document.getElementById("main-heading");
+// 1. Grab our HTML elements
+const myButton = document.getElementById("action-btn");
+const myHeading = document.getElementById("main-heading");
 
-// 2. Change its text content instantly using JavaScript
-mainTitle.textContent = "Welcome to my JavaScript-Powered Page!";
+// 2. Create an array (a list) of status messages
+const statusMessages = [
+    "Status: Systems Online",
+    "Status: Running Diagnostics",
+    "Status: Data Pipeline Active",
+    "Status: Automation Complete"
+];
 
-// 3. Change its color styling dynamically
-mainTitle.style.color = "darkorange";
+// Keep track of which message we are currently showing
+let messageIndex = 0;
+
+// 3. Set up the button click event
+myButton.addEventListener("click", function() {
+    // Change the heading text to the current item in our array
+    myHeading.textContent = statusMessages[messageIndex];
+    myHeading.style.color = "darkviolet";
+    
+    // Move to the next message index in the list
+    messageIndex = messageIndex + 1;
+    
+    // If we reach the end of the list, loop back to the first message (index 0)
+    if (messageIndex >= statusMessages.length) {
+        messageIndex = 0;
+    }
+});
